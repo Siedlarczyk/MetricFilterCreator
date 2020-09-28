@@ -24,7 +24,7 @@ then
   for project in $projects
   do
     echo "--Creating on project: $project"
-    gcloud beta logging metrics create Audit-Config-Changes --config-from-file=metric_temp.json --project=$project
+    gcloud beta logging metrics create $metric_name --config-from-file=metric_temp.json --project=$project
   done
 else
   echo "Aborted"
